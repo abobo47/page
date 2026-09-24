@@ -38,10 +38,12 @@
   .wrap{width:100%;max-width:420px;text-align:center;}
   .avatar{
     width:96px;height:96px;border-radius:50%;
-    background:linear-gradient(135deg,var(--accent),var(--tiktok));
     margin:0 auto 16px;
-    display:flex;align-items:center;justify-content:center;
-    font-size:36px;font-weight:700;color:#fff;
+    display:block;
+    object-fit:cover;
+    border:2px solid rgba(255,255,255,0.12);
+    box-shadow:0 10px 25px rgba(0,0,0,0.22);
+    background:linear-gradient(135deg,var(--accent),var(--tiktok));
   }
   h1{margin:0 0 4px;font-size:22px;}
   p.sub{margin:0 0 28px;color:var(--muted);font-size:14px;}
@@ -140,21 +142,21 @@
 </head>
 <body>
   <div class="wrap">
-    <div class="avatar">Н</div>
-    <h1>ТВОЙ_НІК</h1>
+    <img class="avatar" src="img/avatar.png" alt="abobo47">
+    <h1>abobo47</h1>
     <p class="sub">Стрімер • Twitch & TikTok</p>
 
     <div class="links">
-      <a class="link twitch" href="https://twitch.tv/ТВОЙ_НІК" target="_blank" rel="noopener">
-        <span class="icon">▶</span> Twitch — дивитись стрім
+      <a class="link twitch" href="https://www.twitch.tv/abobo47" target="_blank" rel="noopener">
+        <span class="icon">▶</span> Twitch
       </a>
-      <a class="link tiktok" href="https://tiktok.com/@ТВОЙ_НІК" target="_blank" rel="noopener">
+      <a class="link tiktok" href="https://www.tiktok.com/@abobo47_?_r=1&_t=ZS-93VjVPUHIx7" target="_blank" rel="noopener">
         <span class="icon">♪</span> TikTok
       </a>
-      <a class="link telegram" href="https://t.me/ТВОЙ_НІК" target="_blank" rel="noopener">
+      <a class="link telegram" href="https://t.me/Abobo47" target="_blank" rel="noopener">
         <span class="icon">✈</span> Telegram-канал
       </a>
-      <a class="link donate" href="https://donatello.to/ТВОЙ_НІК" target="_blank" rel="noopener">
+      <a class="link donate" href="https://abobo4747.donatik.ua" target="_blank" rel="noopener">
         <span class="icon">♥</span> Підтримати донатом
       </a>
     </div>
