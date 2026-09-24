@@ -36,15 +36,17 @@
     padding:32px 16px;
   }
   .wrap{width:100%;max-width:420px;text-align:center;}
-  .avatar{
-    width:96px;height:96px;border-radius:50%;
-    margin:0 auto 16px;
-    display:block;
-    object-fit:cover;
-    border:2px solid rgba(255,255,255,0.12);
-    box-shadow:0 10px 25px rgba(0,0,0,0.22);
-    background:linear-gradient(135deg,var(--accent),var(--tiktok));
-  }
+  .avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  display: block;
+  object-fit: cover;
+  border: none; /* Прибираємо рамку */
+  background: transparent; /* Прибираємо градієнтну підкладку */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22); /* Тінь можна залишити для гарного об'єму */
+}
   h1{margin:0 0 4px;font-size:22px;}
   p.sub{margin:0 0 28px;color:var(--muted);font-size:14px;}
   .links{display:flex;flex-direction:column;gap:12px;}
