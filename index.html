@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ТВОЙ_НІК</title>
+<style>
+  :root{
+    --bg:#0f0f14;
+    --card:#1a1a22;
+    --text:#f2f2f5;
+    --muted:#9a9aa5;
+    --accent:#9146ff;
+    --tiktok:#25f4ee;
+    --donate:#ff5470;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){
+      --bg:#f4f4f7;
+      --card:#ffffff;
+      --text:#141418;
+      --muted:#6b6b76;
+    }
+  }
+  *{box-sizing:border-box;}
+  html,body{height:100%;margin:0;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    display:flex;
+    justify-content:center;
+    padding:32px 16px;
+  }
+  .wrap{width:100%;max-width:420px;text-align:center;}
+  .avatar{
+    width:96px;height:96px;border-radius:50%;
+    background:linear-gradient(135deg,var(--accent),var(--tiktok));
+    margin:0 auto 16px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:36px;font-weight:700;color:#fff;
+  }
+  h1{margin:0 0 4px;font-size:22px;}
+  p.sub{margin:0 0 28px;color:var(--muted);font-size:14px;}
+  .links{display:flex;flex-direction:column;gap:12px;}
+  a.link{
+    display:flex;align-items:center;gap:12px;
+    background:var(--card);
+    padding:14px 18px;
+    border-radius:14px;
+    text-decoration:none;
+    color:var(--text);
+    font-weight:600;
+    font-size:15px;
+    border:1px solid rgba(255,255,255,0.06);
+    transition:transform .15s ease;
+  }
+  a.link:active{transform:scale(0.97);}
+  .icon{
+    width:28px;height:28px;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;
+    border-radius:8px;
+    font-size:15px;
+  }
+  .twitch .icon{background:var(--accent);color:#fff;}
+  .tiktok .icon{background:var(--tiktok);color:#000;}
+  .telegram .icon{background:#2AABEE;color:#fff;}
+  .donate .icon{background:var(--donate);color:#fff;}
+  footer{margin-top:32px;color:var(--muted);font-size:12px;}
+
+  .collab-btn{
+    display:flex;align-items:center;justify-content:center;gap:8px;
+    width:100%;
+    margin-top:20px;
+    padding:14px 18px;
+    border-radius:14px;
+    border:1px dashed rgba(255,255,255,0.25);
+    background:transparent;
+    color:var(--text);
+    font-weight:600;
+    font-size:15px;
+    cursor:pointer;
+    font-family:inherit;
+  }
+  .collab-btn:active{transform:scale(0.97);}
+
+  .overlay{
+    position:fixed;inset:0;
+    background:rgba(0,0,0,0.55);
+    display:none;
+    align-items:flex-end;
+    justify-content:center;
+    z-index:10;
+    padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px);
+  }
+  .overlay.open{display:flex;}
+  .modal{
+    width:100%;max-width:420px;
+    background:var(--card);
+    border-radius:20px 20px 0 0;
+    padding:24px 20px 28px;
+    animation:slideup .2s ease;
+  }
+  @keyframes slideup{from{transform:translateY(20px);opacity:0;}to{transform:translateY(0);opacity:1;}}
+  .modal h2{margin:0 0 4px;font-size:18px;}
+  .modal p.hint{margin:0 0 18px;color:var(--muted);font-size:13px;}
+  .modal label{
+    display:block;font-size:12px;color:var(--muted);
+    margin-bottom:6px;margin-top:14px;
+  }
+  .modal input, .modal textarea{
+    width:100%;
+    background:var(--bg);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:10px;
+    padding:12px;
+    color:var(--text);
+    font-family:inherit;
+    font-size:14px;
+    resize:vertical;
+  }
+  .modal textarea{min-height:90px;}
+  .modal-actions{display:flex;gap:10px;margin-top:20px;}
+  .btn-send, .btn-cancel{
+    flex:1;
+    padding:12px;
+    border-radius:10px;
+    border:none;
+    font-weight:600;
+    font-size:14px;
+    cursor:pointer;
+    font-family:inherit;
+  }
+  .btn-send{background:var(--accent);color:#fff;}
+  .btn-cancel{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.15);}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="avatar">Н</div>
+    <h1>ТВОЙ_НІК</h1>
+    <p class="sub">Стрімер • Twitch & TikTok</p>
+
+    <div class="links">
+      <a class="link twitch" href="https://twitch.tv/ТВОЙ_НІК" target="_blank" rel="noopener">
+        <span class="icon">▶</span> Twitch — дивитись стрім
+      </a>
+      <a class="link tiktok" href="https://tiktok.com/@ТВОЙ_НІК" target="_blank" rel="noopener">
+        <span class="icon">♪</span> TikTok
+      </a>
+      <a class="link telegram" href="https://t.me/ТВОЙ_НІК" target="_blank" rel="noopener">
+        <span class="icon">✈</span> Telegram-канал
+      </a>
+      <a class="link donate" href="https://donatello.to/ТВОЙ_НІК" target="_blank" rel="noopener">
+        <span class="icon">♥</span> Підтримати донатом
+      </a>
+    </div>
+
+    <button class="collab-btn" id="openCollab">✉ Співпраця</button>
+
+    <footer>Оновлено 2026</footer>
+  </div>
+
+  <div class="overlay" id="overlay">
+    <div class="modal">
+      <h2>Пропозиція співпраці</h2>
+      <p class="hint">Заповни форму — повідомлення прийде мені на пошту</p>
+
+      <form id="collabForm" action="https://formspree.io/f/ТВІЙ_FORM_ID" method="POST">
+        <label>Ім'я / назва бренду</label>
+        <input type="text" name="name" required>
+
+        <label>Email для відповіді</label>
+        <input type="email" name="_replyto" required>
+
+        <label>Повідомлення</label>
+        <textarea name="message" required></textarea>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-cancel" id="closeCollab">Скасувати</button>
+          <button type="submit" class="btn-send">Надіслати</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const overlay = document.getElementById('overlay');
+    document.getElementById('openCollab').onclick = () => overlay.classList.add('open');
+    document.getElementById('closeCollab').onclick = () => overlay.classList.remove('open');
+    overlay.onclick = (e) => { if(e.target === overlay) overlay.classList.remove('open'); };
+  </script>
+</body>
+</html>
